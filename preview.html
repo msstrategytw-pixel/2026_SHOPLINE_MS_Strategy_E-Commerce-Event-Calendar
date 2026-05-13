@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHOPLINE × 2026 演唱會行銷行事曆</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0C2340;--navy2:#163355;--navy3:#1E4270;--navy-dim:rgba(12,35,64,0.07);--navy-dim2:rgba(12,35,64,0.13);--white:#FFFFFF;--off:#F7F8FA;--off2:#EFF1F5;--border:#DDE1EA;--border2:#C8CEDB;--text:#0C2340;--mid:#3D5068;--muted:#7A8BA0;--muted2:#A8B5C5;--k:#E8315A;--j:#0099CC;--c:#D97706;--w:#059669;--f:#7C3AED;--r:8px;--rl:12px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:'Noto Sans TC',sans-serif;font-size:14px;line-height:1.6;overflow-x:hidden}
+.nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:56px}
+.nav-brand{display:flex;align-items:center;gap:10px}
+.nav-lm{width:30px;height:30px;background:var(--navy);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-lm svg{width:16px;height:16px;fill:white}
+.nav-btext{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--navy);letter-spacing:-.01em}
+.nav-links{display:flex;gap:2px}
+.nav-btn{padding:6px 13px;border-radius:6px;font-size:12px;color:var(--muted);cursor:pointer;transition:all .18s;border:none;background:transparent;font-family:'Noto Sans TC',sans-serif}
+.nav-btn:hover{color:var(--navy);background:var(--navy-dim)}
+.nav-btn.on{color:var(--navy);background:var(--navy-dim2);font-weight:500}
+.nav-right{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.04em}
+@media(max-width:680px){.nav-links{display:none}.nav-right{display:none}}
+.hero{background:var(--navy);color:white;padding:4.5rem 2rem 3.5rem;position:relative;overflow:hidden}
+.hero-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.055) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.hero-accent{position:absolute;top:-120px;right:-80px;width:480px;height:480px;border-radius:50%;border:1px solid rgba(255,255,255,.06);pointer-events:none}
+.hero-accent2{position:absolute;top:-60px;right:-20px;width:300px;height:300px;border-radius:50%;border:1px solid rgba(255,255,255,.04);pointer-events:none}
+.hero-inner{position:relative;max-width:1040px;margin:0 auto}
+.hero-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:4px 13px;font-size:11px;letter-spacing:.08em;color:rgba(255,255,255,.7);margin-bottom:1.4rem;font-weight:500}
+.hero-title{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin-bottom:1rem}
+.hero-title span{opacity:.38}
+.hero-desc{font-size:14px;color:rgba(255,255,255,.6);max-width:560px;line-height:1.75;margin-bottom:2.5rem}
+.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap}
+.stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:700;color:white;line-height:1}
+.stat-label{font-size:11px;color:rgba(255,255,255,.4);margin-top:4px;letter-spacing:.04em}
+@keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.hero-pill{animation:fu .5s .04s ease both}
+.hero-title{animation:fu .5s .1s ease both}
+.hero-desc{animation:fu .5s .18s ease both}
+.hero-stats{animation:fu .5s .26s ease both}
+.legend-bar{background:var(--off);border-bottom:1px solid var(--border);padding:.6rem 2rem;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
+.legend-label{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--muted2);text-transform:uppercase}
+.leg-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--mid)}
+.leg-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.leg-note{margin-left:auto;font-size:11px;color:var(--muted);font-weight:500}
+.container{max-width:1040px;margin:0 auto;padding:2.5rem 2rem}
+.sec-title{font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--navy);text-transform:uppercase;margin-bottom:1.2rem;padding-bottom:.65rem;border-bottom:2px solid var(--navy);display:flex;align-items:center;gap:8px}
+.divider{border:none;border-top:1px solid var(--border);margin:0}
+.cal-filter{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1.2rem}
+.fil-btn{padding:5px 13px;border-radius:20px;border:1.5px solid var(--border2);background:transparent;cursor:pointer;font-size:12px;color:var(--mid);font-family:'Noto Sans TC',sans-serif;transition:all .18s;font-weight:500}
+.fil-btn:hover{border-color:var(--navy);color:var(--navy)}
+.fil-btn.on{color:white;border-color:transparent;font-weight:700}
+.fil-btn[data-f="all"].on{background:var(--navy)}
+.fil-btn[data-f="k"].on{background:var(--k)}
+.fil-btn[data-f="j"].on{background:var(--j)}
+.fil-btn[data-f="c"].on{background:var(--c)}
+.fil-btn[data-f="w"].on{background:var(--w)}
+.fil-btn[data-f="f"].on{background:var(--f)}
+.cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:10px}
+.month-card{border:1.5px solid var(--border);border-radius:var(--rl);overflow:hidden;background:white;transition:border-color .2s,box-shadow .2s}
+.month-card:hover{border-color:var(--navy);box-shadow:0 4px 16px rgba(12,35,64,.08)}
+.month-head{padding:8px 14px;background:var(--off);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;font-size:11px;font-weight:700;color:var(--navy);letter-spacing:.06em}
+.ev-row{padding:9px 14px;border-left:3px solid;border-bottom:1px solid var(--border);display:flex;gap:9px;align-items:flex-start;transition:background .14s}
+.ev-row:last-child{border-bottom:none}
+.ev-row:hover{background:var(--off)}
+.ev-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.ev-name{font-size:12px;font-weight:500;line-height:1.35;color:var(--text)}
+.ev-sub{font-size:10px;color:var(--muted);margin-top:2px}
+.ev-tags{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap}
+.etag{font-size:9px;padding:1px 6px;border-radius:3px;font-weight:700;letter-spacing:.03em}
+.hot-etag{background:#FEF3C7;color:#92400E}
+.mega-etag{background:#FEE2E8;color:#991B3A}
+.rank-etag{background:var(--off2);color:var(--muted);border:1px solid var(--border)}
+.cat-tag{font-size:9px;padding:1px 6px;border-radius:3px;font-weight:700}
+.tag-k{background:#FEE2E8;color:#991B3A}
+.tag-j{background:#E0F4FB;color:#005A7A}
+.tag-c{background:#FEF3C7;color:#7C4200}
+.tag-w{background:#D1FAE5;color:#065F46}
+.tag-f{background:#EDE9FE;color:#4C1D95}
+.ev-row.k{border-left-color:var(--k)}.ev-row.k .ev-dot{background:var(--k)}
+.ev-row.j{border-left-color:var(--j)}.ev-row.j .ev-dot{background:var(--j)}
+.ev-row.c{border-left-color:var(--c)}.ev-row.c .ev-dot{background:var(--c)}
+.ev-row.w{border-left-color:var(--w)}.ev-row.w .ev-dot{background:var(--w)}
+.ev-row.f{border-left-color:var(--f)}.ev-row.f .ev-dot{background:var(--f)}
+.ev-row.yearly-highlight{background:linear-gradient(90deg,rgba(232,49,90,.07) 0%,rgba(255,184,0,.04) 100%);border-left-width:4px;border-left-color:#E8315A}
+.ev-row.yearly-highlight .ev-name{font-weight:700;color:var(--navy)}
+.ev-row.yearly-highlight:hover{background:linear-gradient(90deg,rgba(232,49,90,.13) 0%,rgba(255,184,0,.07) 100%)}
+.yearly-badge{display:inline-flex;align-items:center;gap:3px;font-size:9px;padding:2px 7px;border-radius:3px;font-weight:700;background:linear-gradient(90deg,#E8315A,#FF6B35);color:white;letter-spacing:.02em}
+.tbd-ev-badge{background:rgba(0,153,204,.12);color:#005A7A;border:1px solid rgba(0,153,204,.3);font-size:9px;padding:1px 6px;border-radius:3px;font-weight:700}
+.tbd-block{margin-top:1.2rem;border:2px dashed var(--border2);border-radius:var(--rl);overflow:hidden;background:white}
+.tbd-head{background:linear-gradient(135deg,#E0F4FB,#EFF8FD);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1.5px dashed var(--border2)}
+.tbd-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,153,204,.12);border:1.5px solid rgba(0,153,204,.28);border-radius:20px;padding:3px 12px;font-size:10px;font-weight:700;letter-spacing:.08em;color:#005A7A}
+.tbd-label{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--muted2);text-transform:uppercase}
+.tbd-artist{font-size:16px;font-weight:700;color:var(--navy);margin:6px 0 3px}
+.tbd-sub{font-size:11px;color:var(--mid);line-height:1.6}
+.tbd-tags{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap}
+.tbd-body{padding:14px 18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.tbd-body{grid-template-columns:1fr}}
+.tbd-info-block{background:var(--off);border-radius:8px;padding:10px 13px}
+.tbd-info-label{font-size:9px;font-weight:700;letter-spacing:.12em;color:var(--muted2);text-transform:uppercase;margin-bottom:5px}
+.tbd-info-val{font-size:12px;font-weight:600;color:var(--navy);line-height:1.55}
+.tbd-note{padding:10px 18px 14px;font-size:11px;color:var(--mid);border-top:1px dashed var(--border);line-height:1.7}
+.tbd-note strong{color:var(--navy)}
+.tl-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+@media(max-width:640px){.tl-grid{grid-template-columns:1fr 1fr}}
+.tl-cell{padding:1.4rem 1.5rem;border-right:1px solid var(--border);background:white;transition:background .18s}
+.tl-cell:last-child{border-right:none}
+.tl-cell:hover{background:var(--off)}
+.tl-cell.hl{background:var(--navy)}
+.tl-cell.hl:hover{background:var(--navy2)}
+.tl-week{font-family:'Syne',sans-serif;font-size:2.3rem;font-weight:700;line-height:1;margin-bottom:2px;color:var(--navy)}
+.tl-cell.hl .tl-week{color:white}
+.tl-unit{font-size:10px;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;font-weight:500;text-transform:uppercase}
+.tl-cell.hl .tl-unit{color:rgba(255,255,255,.45)}
+.tl-stage{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.tl-cell.hl .tl-stage{color:white}
+.tl-desc{font-size:11px;color:var(--muted);line-height:1.6}
+.tl-cell.hl .tl-desc{color:rgba(255,255,255,.55)}
+.strat-banner{background:var(--navy);color:white;border-radius:var(--rl);padding:1.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.strat-en{font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.strat-zh{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;line-height:1.35}
+.strat-open{font-family:'Syne',sans-serif;font-size:4rem;font-weight:800;color:rgba(255,255,255,.1);letter-spacing:-.02em;line-height:1}
+.industry-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.ind-card{background:white;border:1.5px solid var(--border);border-radius:var(--rl);overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.ind-card:hover{border-color:var(--navy);box-shadow:0 6px 20px rgba(12,35,64,.09)}
+.ind-head{padding:16px 18px 12px;border-bottom:1px solid var(--border);background:var(--off)}
+.ind-top{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.ind-icon{font-size:16px}
+.ind-name{font-size:15px;font-weight:700;color:var(--navy)}
+.ind-tagline{font-size:11px;color:var(--mid);line-height:1.6}
+.ind-sec{padding:10px 18px;border-bottom:1px solid var(--border)}
+.ind-sec-label{font-size:9px;font-weight:700;letter-spacing:.14em;color:var(--muted2);text-transform:uppercase;margin-bottom:7px}
+.items-row{display:flex;flex-wrap:wrap;gap:5px}
+.item-pill{font-size:10px;padding:3px 9px;border-radius:20px;border:1.5px solid var(--border2);color:var(--mid);font-weight:500}
+.op-list{list-style:none;font-size:12px;color:var(--mid);line-height:1.65}
+.op-list li{padding:5px 0 5px 14px;border-bottom:1px solid var(--border);position:relative}
+.op-list li:last-child{border-bottom:none}
+.op-list li::before{content:'';position:absolute;left:0;top:13px;width:5px;height:5px;border-radius:50%;background:var(--navy);opacity:.25}
+.op-list li strong{color:var(--navy);font-weight:700}
+.plat-row{display:flex;gap:5px;padding:10px 18px;flex-wrap:wrap}
+.plat{font-size:10px;padding:3px 9px;border-radius:4px;font-weight:700;letter-spacing:.03em}
+.plat.ig{background:#FEE2E8;color:#9D1746}
+.plat.tt{background:#E0F4FB;color:#005A7A}
+.plat.fb{background:#EDE9FE;color:#4C1D95}
+.plat.yt{background:#FEF3C7;color:#7C4200}
+.spotlight-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.spot-card{background:white;border:1.5px solid var(--border);border-radius:var(--rl);overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.spot-card:hover{border-color:var(--navy);box-shadow:0 6px 20px rgba(12,35,64,.09)}
+.spot-card.bts-card{border-color:rgba(232,49,90,.22);box-shadow:0 4px 20px rgba(232,49,90,.07)}
+.spot-card.bts-card:hover{border-color:rgba(232,49,90,.45);box-shadow:0 8px 28px rgba(232,49,90,.13)}
+.spot-head{padding:18px 18px 14px}
+.spot-typebar{display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.spot-pill{font-size:10px;padding:3px 9px;border-radius:4px;font-weight:700;letter-spacing:.03em}
+.spot-pill.k{background:#FEE2E8;color:#991B3A}
+.spot-pill.j{background:#E0F4FB;color:#005A7A}
+.spot-pill.c{background:#FEF3C7;color:#7C4200}
+.spot-pill.w{background:#D1FAE5;color:#065F46}
+.spot-pill.f{background:#EDE9FE;color:#4C1D95}
+.spot-pill.k-inv{background:rgba(232,49,90,.22);color:#FF9AB5;border:1px solid rgba(232,49,90,.28)}
+.spot-mtag{margin-left:auto;font-size:10px;font-weight:700;color:var(--muted);background:var(--off2);padding:2px 8px;border-radius:3px}
+.spot-mtag-fire{margin-left:auto;font-size:10px;font-weight:700;color:#FFB800;background:rgba(255,184,0,.12);padding:2px 8px;border-radius:3px;border:1px solid rgba(255,184,0,.22)}
+.spot-artist{font-size:16px;font-weight:700;line-height:1.2;margin-bottom:4px;color:var(--navy)}
+.spot-sub{font-size:11px;color:var(--mid);line-height:1.5;margin-bottom:10px}
+.spot-aud{display:flex;flex-wrap:wrap;gap:5px}
+.aud-tag{font-size:10px;padding:2px 8px;border-radius:3px;background:var(--navy-dim);color:var(--navy);font-weight:500}
+.aud-tag-inv{font-size:10px;padding:2px 8px;border-radius:3px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.8);font-weight:500}
+.spot-body{border-top:1px solid var(--border);padding:14px 18px 16px}
+.spot-ind{font-size:11px;font-weight:700;margin:12px 0 7px;color:var(--navy)}
+.spot-ind:first-child{margin-top:0}
+.slogan-box{background:var(--off);border-left:3px solid var(--navy);padding:8px 11px;margin-bottom:8px;border-radius:0 6px 6px 0}
+.slogan-label{font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--muted2);margin-bottom:3px;text-transform:uppercase}
+.slogan-text{font-size:12px;color:var(--navy);line-height:1.55;font-style:italic;font-weight:500}
+.tips{list-style:none;font-size:11px;color:var(--mid);line-height:1.55}
+.tips li{padding:2px 0 2px 13px;position:relative}
+.tips li::before{content:'→';position:absolute;left:0;color:var(--navy);font-size:9px;top:3px;font-weight:700}
+.tips li strong{color:var(--navy);font-weight:700}
+.footer{background:var(--navy);color:white;padding:2.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-brand{display:flex;align-items:center;gap:10px}
+.footer-lm{width:28px;height:28px;background:rgba(255,255,255,.12);border-radius:5px;display:flex;align-items:center;justify-content:center}
+.footer-lm svg{width:15px;height:15px;fill:white}
+.footer-btext{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:white}
+.footer-note{font-size:11px;color:rgba(255,255,255,.3)}
+@media(max-width:768px){.hero{padding:3rem 1.25rem 2.5rem}.container{padding:1.5rem 1.25rem}.spotlight-grid,.industry-grid{grid-template-columns:1fr}.hero-title{font-size:2rem}.hero-stats{gap:1.5rem}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="nav-lm"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
+    <span class="nav-btext">SHOPLINE 電商行銷</span>
+  </div>
+  <div class="nav-links">
+    <button class="nav-btn on" onclick="navTo('calendar',this)">行事曆</button>
+    <button class="nav-btn" onclick="navTo('timing',this)">籌備時程</button>
+    <button class="nav-btn" onclick="navTo('strategy',this)">產業策略</button>
+    <button class="nav-btn" onclick="navTo('spotlight',this)">重點場次</button>
+  </div>
+  <div class="nav-right">2026 · 5月 — 12月</div>
+</nav>
+
+<header class="hero">
+  <div class="hero-dots"></div><div class="hero-accent"></div><div class="hero-accent2"></div>
+  <div class="hero-inner">
+    <div class="hero-pill">● 2026 電商行銷作戰指南</div>
+    <h1 class="hero-title">演唱會行銷<br><span>行事曆</span></h1>
+    <p class="hero-desc">整合 2026 年 5 月中旬後至年底重點演唱會場次，為服飾、美妝、3C、居家四大電商產業提供完整的社群行銷策略、跨平台操作腳本與籌備時程建議。</p>
+    <div class="hero-stats">
+      <div><div class="stat-num">50+</div><div class="stat-label">更新後重點場次</div></div>
+      <div><div class="stat-num">4</div><div class="stat-label">電商產業策略</div></div>
+      <div><div class="stat-num">6</div><div class="stat-label">大行銷策略腳本</div></div>
+      
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <span class="legend-label">圖例</span>
+  <div class="leg-item"><div class="leg-dot" style="background:var(--k)"></div>🇰🇷 韓團/韓星</div>
+  <div class="leg-item"><div class="leg-dot" style="background:var(--j)"></div>🇯🇵 日團/日本歌手</div>
+  <div class="leg-item"><div class="leg-dot" style="background:var(--c)"></div>🎤 華語/台灣歌手</div>
+  <div class="leg-item"><div class="leg-dot" style="background:var(--f)"></div>🎪 音樂祭/拼盤</div>
+  <div class="leg-item"><div class="leg-dot" style="background:var(--w)"></div>🌍 西洋/其他</div>
+  <div class="leg-note">🔥 = 全年最高話題熱度</div>
+</div>
+
+<section id="calendar">
+  <div class="container">
+    <div class="sec-title">📅 全年重點演唱會行事曆</div>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:1.2rem">僅列 2026/5/13 後重點公開場次・括號內為當月熱度排序</p>
+    <div class="cal-filter">
+      <button class="fil-btn on" data-f="all" onclick="filterCal('all',this)">全部顯示</button>
+      <button class="fil-btn" data-f="k" onclick="filterCal('k',this)">🇰🇷 韓流</button>
+      <button class="fil-btn" data-f="j" onclick="filterCal('j',this)">🇯🇵 日系</button>
+      <button class="fil-btn" data-f="c" onclick="filterCal('c',this)">🎤 華語</button>
+      <button class="fil-btn" data-f="w" onclick="filterCal('w',this)">🌍 西洋</button>
+      <button class="fil-btn" data-f="f" onclick="filterCal('f',this)">🎪 音樂祭</button>
+    </div>
+    <div class="cal-grid" id="cal-grid"></div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="timing">
+  <div class="container">
+    <div class="sec-title">⏱ 建議籌備與操作時程</div>
+    <div class="tl-wrap">
+      <div class="tl-grid">
+        <div class="tl-cell">
+          <div class="tl-week">4</div>
+          <div class="tl-unit">週前</div>
+          <div class="tl-stage">預熱籌備期</div>
+          <div class="tl-desc">預熱內容籌備・商品頁優化・代購開跑・活動設計・素材製作</div>
+        </div>
+        <div class="tl-cell">
+          <div class="tl-week">2</div>
+          <div class="tl-unit">週前</div>
+          <div class="tl-stage">活動上線期</div>
+          <div class="tl-desc">活動頁上線・限時優惠搶先推出・社群溝通緩步啟動・行銷素材陸續上架・逐漸堆疊聲量</div>
+        </div>
+        <div class="tl-cell">
+          <div class="tl-week">1</div>
+          <div class="tl-unit">週前</div>
+          <div class="tl-stage">密集衝量期</div>
+          <div class="tl-desc">主力社群行銷・穿搭開箱全力推播・行前攻略圖文・最終湊單提醒</div>
+        </div>
+        <div class="tl-cell hl">
+          <div class="tl-week">當週</div>
+          <div class="tl-unit">演唱會期間</div>
+          <div class="tl-stage">收割高峰期</div>
+          <div class="tl-desc">社群流量最高・互動曬單・UGC 內容行銷・即時導購・演出後再推播</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="strategy">
+  <div class="container">
+    <div class="sec-title">📣 四大電商產業・社群行銷策略矩陣</div>
+    <div class="strat-banner">
+      <div>
+        <div class="strat-en">E-COMMERCE × CONCERT MARKETING</div>
+        <div class="strat-zh">四大電商產業<br>社群行銷策略矩陣</div>
+      </div>
+      <div class="strat-open">開演</div>
+    </div>
+    <div class="industry-grid">
+
+      <div class="ind-card">
+        <div class="ind-head">
+          <div class="ind-top"><span class="ind-icon">👗</span><span class="ind-name">流行服飾</span></div>
+          <div class="ind-tagline">從舞台打歌服、機場私服到官方周邊，打造粉絲無法拒絕的追星全套行頭。</div>
+        </div>
+        <div class="ind-sec">
+          <div class="ind-sec-label">推薦品項</div>
+          <div class="items-row">
+            <span class="item-pill">應援色系服裝</span><span class="item-pill">痛包/娃包/吊飾</span><span class="item-pill">手機掛繩</span><span class="item-pill">同款飾品配件</span><span class="item-pill">官方周邊代購</span><span class="item-pill">明星同款平替</span>
+          </div>
+        </div>
+        <div class="ind-sec">
+          <div class="ind-sec-label">操作手法・呈現形式</div>
+          <ul class="op-list">
+            <li><strong>痛點解法（Painkiller）：</strong>鎖定追星現場的剛需場景。「排隊防曬抗UV薄外套」、「能完美收納手燈與應援扇的暗袋托特包」、「三天連唱也不怕的行動電源」——功能性商品轉換率高、退貨率極低；手機掛繩、吊飾、配件怎麼搭、不撞衫的打歌服，都是應援文化的延伸選品。</li>
+            <li><strong>同款平替（The Replica）：</strong>快速截圖偶像近期機場穿搭或打歌服關鍵元素（特定剪裁的皮衣、特殊配色球鞋），推出親民平替款攔截衝動購物流量。如因張員瑛爆紅的 miu miu 風格，可做「如何穿出相同氛圍感」穿搭教學；CNBLUE 樂手質感、King Gnu 日系前衛、Charlie Puth 率性歐美風都有明確選品方向。</li>
+            <li><strong>氛圍延伸（Vibe Check）：</strong>販賣人設。建立「甜酷辣妹風」、「日系暗黑疊穿」、「清新文青感」等分類；消費者買的是「我想和偶像擁有相同的生活品味」，鬆弛感、清新感穿搭搭配新品上架或直播帶動單品銷售。演唱會當週可發佈經典造型復刻或穿搭教學，熱度最高。</li>
+            <li><strong>周邊代購與官方聯名：</strong>直播連線即時代購、預售限量周邊、手燈、專輯。充滿氛圍感的娃娃、娃服、愛迪達新款痛包等限量品都能帶動話題；尤其多個二代團回歸的場次，加入懷舊配樂的貼文效果極佳。發布時機：演唱會前一週起密集圖文，演出當天及後兩日透過 Reels / Threads 鼓勵 OOTD 分享。</li>
+          </ul>
+        </div>
+        <div class="plat-row"><span class="plat ig">IG 穿搭圖鑑輪播</span><span class="plat tt">Reels 打歌服復刻</span><span class="plat fb">Threads OOTD Tag</span><span class="plat yt">直播代購</span></div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-head">
+          <div class="ind-top"><span class="ind-icon">💄</span><span class="ind-name">美妝保健</span></div>
+          <div class="ind-tagline">從舞台妝容解析到明星私下保養秘訣，全面包辦粉絲的美麗需求。</div>
+        </div>
+        <div class="ind-sec">
+          <div class="ind-sec-label">推薦品項</div>
+          <div class="items-row">
+            <span class="item-pill">同款眼影/唇膏</span><span class="item-pill">氣色/美白保健品</span><span class="item-pill">助眠保養品</span><span class="item-pill">女神氛圍香水</span>
+          </div>
+        </div>
+        <div class="ind-sec">
+          <div class="ind-sec-label">操作手法・呈現形式</div>
+          <ul class="op-list">
+            <li><strong>彩妝品推薦：</strong>製作「跟著 ITZY 仿妝教學：大膽撞色眼影×強烈眼線」，以 IG 圖文或 Reels 分解女團妝容特色與技巧；EXO 場次可主打男星同款保養切角（精華液、防曬、保濕）；部分舞台與演出感較強的場次，可主打「演唱會爆汗持久底妝」的功能型訴求。</li>
+            <li><strong>保健/保養品切角：</strong>以「EXO 成員如何在睽違多年後以更成熟的魅力重返舞台？」、「ITZY 高能舞蹈練習背後的體力秘訣」；搭配「演唱會前 7 天好氣色準備計畫」、「追 EXO 前補視力保養」等標語為主題推廣瘦身、氣色、視力等保健品。</li>
+            <li><strong>香氛情境：</strong>以歌手個人氣質或歌曲氛圍推薦對應香水，以生活品味而非功能訴求帶動轉換；西洋/爵士場次受眾接受度特別高。</li>
+          </ul>
+        </div>
+        <div class="plat-row"><span class="plat ig">IG Reels 仿妝教學</span><span class="plat yt">YouTuber 產品開箱</span><span class="plat fb">Threads 保養請益</span></div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-head">
+          <div class="ind-top"><span class="ind-icon">📱</span><span class="ind-name">3C 數位・美食</span></div>
+          <div class="ind-tagline">滿足演唱會現場的拍攝剛需與聆聽享受，並以飲食情境拉近粉絲共感。</div>
+        </div>
+        <div class="ind-sec">
+          <div class="ind-sec-label">推薦品項</div>
+          <div class="items-row">
+            <span class="item-pill">高音質/降噪耳機</span><span class="item-pill">隨身相機(租/買)</span><span class="item-pill">望遠鏡/腳架</span><span class="item-pill">大容量行動電源</span><span class="item-pill">手電筒</span><span class="item-pill">韓式/日式飲食伴手禮</span>
+          </div>
+        </div>
+        <div class="ind-sec">
+          <div class="ind-sec-label">操作手法・呈現形式</div>
+          <ul class="op-list">
+            <li><strong>前期預熱（耳機）：</strong>「你開始複習應援歌單了嗎？」以歌單截圖搭配高音質耳機，主打沉浸聆聽備戰體驗；日系場次適合帶出可展現樂團層次的 Hi-Fi 音響產品。</li>
+            <li><strong>現場實戰（攝影配件）：</strong>主推拍攝功能強大的演唱會神機、隨身相機、可拍攝 Reels 或照片的手機支架、帶有造型的手機掛繩及望遠鏡、手電筒等配件，尤其針對大巨蛋的遠距場次。</li>
+            <li><strong>行動電源與存量剛需：</strong>以「演唱會錄到一半手機沒電、沒容量」的痛點為題營造共鳴，推廣自帶線大容量行動電源；BTS 三天連場可加強「三天連唱也不怕」情境。</li>
+            <li><strong>華語場次手電筒跟唱：</strong>以「演唱會打燈跟唱指南」情境推廣隨身手電筒，適合孫燕姿、動力火車等金曲滿滿、令人忍不住跟唱的場次。</li>
+            <li><strong>美食同款企劃：</strong>以「XXX明星最愛的零食」或「直播中吃過的料理」為主題，勾起粉絲好奇與追隨心理，推薦嘗試購買。</li>
+          </ul>
+        </div>
+        <div class="plat-row"><span class="plat ig">IG 歌單/美食</span><span class="plat tt">拍攝情境化 Reels</span><span class="plat fb">Threads 情報推薦</span></div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-head">
+          <div class="ind-top"><span class="ind-icon">🏠</span><span class="ind-name">居家生活</span></div>
+          <div class="ind-tagline">以明星私下習慣引發共鳴，並包辦演唱會後的戰利品收納。</div>
+        </div>
+        <div class="ind-sec">
+          <div class="ind-sec-label">推薦品項</div>
+          <div class="items-row">
+            <span class="item-pill">小卡與置物收納</span><span class="item-pill">質感香氛/寢具</span><span class="item-pill">寵物商品</span><span class="item-pill">戶外健身用品</span>
+          </div>
+        </div>
+        <div class="ind-sec">
+          <div class="ind-sec-label">操作手法・呈現形式</div>
+          <ul class="op-list">
+            <li><strong>戰利品收納：</strong>演唱會前後，藉由「戰利品展示」、「ROOM TOUR」概念帶動收納架、燈串、相框等品項（如：一張照片證明自己是 XXX 粉絲），推廣透明壓克力展示架、小卡收納冊，展現粉絲如何把周邊擺飾完美融入居家空間。</li>
+            <li><strong>知識點切入：</strong>用明星相關冷知識作為起手式，例如「XX藝人私下和舞台上反差感極大，其實平日是超愛窩在棉被的大 I 人」（藉此推薦居家寢具、舒適傢俱）；「XX明星私下是寵物控」➡ 推薦寵物商品；文青歌手則可針對粉絲受眾推薦質感香氛等氛圍營造的商品。</li>
+            <li><strong>戶外/運動用品：</strong>從 XX 明星維持身材，日常運動習慣/健身組合為話題，順勢推廣健身相關用品。如 BTS JIN 私下喜歡釣魚，即可用貼文說明原由，以此為契機代入產品介紹。</li>
+          </ul>
+        </div>
+        <div class="plat-row"><span class="plat ig">IG 知識圖文</span><span class="plat yt">Room Tour Vlog</span><span class="plat fb">Threads 貼文</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="spotlight">
+  <div class="container">
+    <div class="sec-title">⭐ 重點場次操作範例・粉絲受眾與行銷標語</div>
+    <div class="spotlight-grid">
+
+      <div class="spot-card">
+        <div class="spot-head" style="background:linear-gradient(135deg,#E8F4FD,#F0ECFF)">
+          <div class="spot-typebar"><span class="spot-pill k">🇰🇷 Kpop 韓流</span><span class="spot-mtag">9月</span></div>
+          <div class="spot-artist">IVE《SHOW WHAT I AM》台北小巨蛋</div>
+          <div class="spot-sub">9/11–12・2天連場・第二次世界巡演・台灣站全球爆滿</div>
+          <div class="spot-aud"><span class="aud-tag">18–28 第四代粉絲</span><span class="aud-tag">高美感追求者</span><span class="aud-tag">重視造型與視覺感</span></div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-ind">👗 服飾鞋包</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「展現你的 SHOW WHAT I AM！IVE 風格的自信穿搭，讓小巨蛋看見你的主角光環」</div></div>
+          <ul class="tips">
+            <li>IVE 以高冷知性×可甜可辣的雙面風格著稱，適合製作「IVE 成員風格對應穿搭」圖文，服飾選品從純白簡約到暗色個性款皆有受眾。</li>
+            <li>推廣透明痛包、手機掛繩、頸掛飾品組合，IVE 粉絲（DIVE）應援文化成熟，周邊配件消費力高。</li>
+          </ul>
+          <div class="spot-ind">💄 美妝保養</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「IVE 妝感解析！可甜可辣的女團氣場，從底妝到眼線一次拆解」</div></div>
+          <ul class="tips">
+            <li>IVE 成員妝感橫跨清透裸妝與濃郁眼妝，適合分系列拆解，製作 IG 輪播圖文帶出眼影、唇釉等彩妝品項。</li>
+            <li>搭配「演唱會前好氣色準備計畫」，推廣保養品與持妝底妝，切入演出前一週的購買決策高峰期。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-head" style="background:linear-gradient(135deg,#FDF0F8,#F5E8FF)">
+          <div class="spot-typebar"><span class="spot-pill k">🇰🇷 Kpop 韓流</span><span class="spot-mtag">7月 🔥 話題</span></div>
+          <div class="spot-artist">EXO《PLANET #6 - EXhOrizon》高雄巨蛋 2連場</div>
+          <div class="spot-sub">7/18–19・高雄巨蛋・SM娛樂傳奇男團高雄加場回歸</div>
+          <div class="spot-aud"><span class="aud-tag">22–35 初代/第二代粉絲</span><span class="aud-tag">高消費力 EXO-L</span><span class="aud-tag">南部加場動員</span><span class="aud-tag">含大量回鍋粉</span></div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-ind">👗 服飾鞋包</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「We Are One 再聚首！EXO 應援穿搭全指南，用本命的代表色出征」</div></div>
+          <ul class="tips">
+            <li>EXO-L 普遍年齡層為 22–35 歲，消費力相對強、品味成熟，服飾選品應以「精緻質感」為主，可推廣質感飾品、低調奢華小包、成員同款風格單品。</li>
+            <li>EXO 以銀河宇宙為主題概念，適合推廣星空元素、珍珠白、金屬銀色系服裝與配件；官方應援棒「燦光棒」配色可延伸成白色系應援穿搭組合。</li>
+            <li>代購操作重點可放在官方周邊、小卡收藏冊與演唱會限定商品，透過「高雄加場補貨」、「南部場出征包」等稀缺性訴求推動轉換。</li>
+          </ul>
+          <div class="spot-ind">💄 美妝保健</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「等了這麼久！見到 EXO 之前，先做好自己的完美狀態」</div></div>
+          <ul class="tips">
+            <li>以「男生偶像維持逆齡皮膚的法寶」切入，帶入精華液、防曬、維生素等中性適用品項，讓保養溝通不受性別限制。</li>
+            <li>以「見偶像前的氣色補給」作為情感共鳴文案，推廣保健品與底妝修護，描繪粉絲等待重逢、準備赴約的儀式感。</li>
+            <li>演唱會連場需求強烈，適合推廣體力補充、護喉糖、視力保健等實用型商品，以「演唱會必備補給包」為主題整合銷售。</li>
+          </ul>
+          <div class="spot-ind">🏠 居家・戰利品收納</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「EXO 宇宙系主題展示牆！打造屬於 EXO-L 的星球基地」</div></div>
+          <ul class="tips">
+            <li>EXO-L 收藏文化深厚，小卡、專輯、簽名海報與娃娃周邊收納需求龐大，適合推廣透明壓克力展示架、小卡冊、燈串照片牆組合。</li>
+            <li>以「堆疊成山的娃娃、周邊、專輯、小卡如何收納？」作為文案情境，引發粉絲共鳴，並把戰利品整理包裝成演唱會後續消費需求。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-head" style="background:linear-gradient(135deg,#FEE6F0,#FFF0E6)">
+          <div class="spot-typebar"><span class="spot-pill k">🇰🇷 Kpop 韓流</span><span class="spot-mtag">6月</span></div>
+          <div class="spot-artist">ITZY《TUNNEL VISION》首度高雄巨蛋</div>
+          <div class="spot-sub">6/27・高雄巨蛋・第3次世界巡迴・南台灣MIDZY首場大型演唱會</div>
+          <div class="spot-aud"><span class="aud-tag">16–28 MIDZY</span><span class="aud-tag">高能舞蹈追隨者</span><span class="aud-tag">大膽潮流穿搭族</span><span class="aud-tag">南部粉絲</span></div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-ind">👗 服飾鞋包</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「打開 TUNNEL VISION，只看見最有個性的你！ITZY 解鎖穿搭的 5 種姿態」</div></div>
+          <ul class="tips">
+            <li>ITZY 以「做自己」為核心概念，各成員風格差異明顯（YUNA 清甜、RYUJIN 個性、CHAERYEONG 前衛、LIA 率性），可製作「你是哪個 ITZY 成員穿搭風格」互動圖文，帶動多品項銷售。</li>
+            <li>ITZY 舞台服裝常見撞色、幾何剪裁、Y2K 元素，適合推廣亮色系短版上衣、低腰牛仔褲、厚底球鞋等潮流單品；手機掛繩、頸掛配件等 Y2K 飾品轉換率高。</li>
+            <li>以「南部首場！高雄 MIDZY 等多久了」為話題切入，專門為南台灣粉絲製作「高雄巨蛋出征必備清單」，強化地域認同感。</li>
+          </ul>
+          <div class="spot-ind">💄 美妝彩妝</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「ITZY 的 TUNNEL VISION 妝：亮眼不怕撞色，讓自己成為高雄巨蛋最搶眼的那一個」</div></div>
+          <ul class="tips">
+            <li>製作「ITZY 成員別仿妝攻略」IG 輪播圖文，帶出眼影盤、持色唇釉、亮片眼線等彩妝選品；強調舞台辣妹感的防水持妝訴求，適合高能演唱會環境。</li>
+            <li>針對夏季高雄濕熱天氣，推廣毛孔控油定妝噴霧、防水防汗粉底，以「南部夏天熱瘋了也不脫妝」作為核心痛點文案。</li>
+          </ul>
+          <div class="spot-ind">📱 3C・現場攝影</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「第一次進高雄巨蛋，攝影裝備你準備好了嗎？」</div></div>
+          <ul class="tips">
+            <li>南部首場大型演唱會對 MIDZY 意義非凡，拍攝紀念需求強烈，主打高倍望遠鏡、隨身相機、手機夜拍模式配件。</li>
+            <li>以「首場南部演唱會，每個畫面都要留下來」為情感訴求，推廣大容量記憶卡、備用電池組合。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-head" style="background:linear-gradient(135deg,#E8F0FF,#EFF8FC)">
+          <div class="spot-typebar"><span class="spot-pill k">🇰🇷 Kpop 韓流</span><span class="spot-mtag">7月</span></div>
+          <div class="spot-artist">DxS《소야곡 ON STAGE》高雄巨蛋</div>
+          <div class="spot-sub">7/25・高雄巨蛋・SEVENTEEN DK（세븐틴 도겸）& 勝寛 雙主唱單元小分隊巡演</div>
+          <div class="spot-aud"><span class="aud-tag">18–32 CARAT</span><span class="aud-tag">SEVENTEEN 粉絲</span><span class="aud-tag">高黏著度應援族</span><span class="aud-tag">追連站場次的核心粉</span></div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-ind">👗 服飾鞋包</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「DK × 勝寛的夜曲之夜：帥氣男聲應援穿搭，唱進高雄最熱的夏夜」</div></div>
+          <ul class="tips">
+            <li>DxS 由 SEVENTEEN 主唱 DK 與勝寛組成，粉絲（CARAT）群體成熟、黏著度高，與 CxM 場次形成 SEVENTEEN 小分隊連場效應，可推出「CARAT 連戰應援穿搭全攻略」。</li>
+            <li>《소야곡（夜曲）》概念偏向夜晚浪漫輕熟感，適合推廣雅緻飾品、金屬質感耳環、質感小包、簡約中性穿搭單品，避免過度可愛或少女路線。</li>
+            <li>代購操作：SEVENTEEN 周邊歷來稀缺且需求龐大，DxS 小分隊限定周邊可從應募期開始主打稀缺性預購，製作「DxS 限定小卡全攻略」懶人包圖文，導流至代購頁面。</li>
+          </ul>
+          <div class="spot-ind">💄 美妝保健</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「7月高雄的夜，你準備好以最好的狀態赴約了嗎？」</div></div>
+          <ul class="tips">
+            <li>夏夜戶外演唱會加持，防曬、清爽持妝品需求顯著，以「南部夏夜不滴汗的妝容秘密」帶出輕薄底妝、油控定妝蜜粉推薦。</li>
+            <li>DK 以深情唱腔著稱，可製作「如果 DK 的聲音是一款香水」情境圖文，帶出溫暖木質調或琥珀調香水，與演唱會的浪漫夜曲氛圍契合。</li>
+          </ul>
+          <div class="spot-ind">🏠 居家・周邊收藏</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「把 DxS 的夜曲帶回家：限定小卡收納冊 × 星光燈串展示牆」</div></div>
+          <ul class="tips">
+            <li>CARAT 收藏文化極為旺盛，SEVENTEEN 成員小卡、官方寫真收藏需求高，適合推廣高透明度小卡保護套、精裝收藏冊、多格置物展示架。</li>
+            <li>以「把演唱會的感動複製回房間」為概念，推廣燈串、相框牆組合，視覺效果強，IG 存圖率高。</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="spot-card">
+        <div class="spot-head" style="background:linear-gradient(135deg,#FDF0F8,#FFF3E8)">
+          <div class="spot-typebar"><span class="spot-pill k">🇰🇷 Kpop 韓流</span><span class="spot-mtag-fire">5月 🔥 新公開</span></div>
+          <div class="spot-artist">K-SPARK in KAOHSIUNG 2026</div>
+          <div class="spot-sub">5/30 19:00・高雄世運主場館・G-DRAGON、TAEYEON、FTISLAND、DPR IAN、KiiiKiii</div>
+          <div class="spot-aud"><span class="aud-tag">跨世代韓流粉</span><span class="aud-tag">高雄大型戶外場</span><span class="aud-tag">拼盤型購票動機</span><span class="aud-tag">GD/泰妍高話題</span></div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-ind">👗 服飾鞋包</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「一晚集合五種韓流風格：從 GD 前衛到泰妍清冷，打造你的 K-SPARK 出征造型」</div></div>
+          <ul class="tips">
+            <li>卡司橫跨 BIGBANG、少女時代、韓團樂團、獨立創作與新生代女團，可用「五大風格 Dress Code」拆成前衛潮流、清冷女神、搖滾樂團、暗黑迷幻、清新少女等穿搭線。</li>
+            <li>高雄世運主場館屬大型戶外場，適合推廣防曬外套、帽款、輕量包、手機掛繩與應援收納配件，從造型與實用性雙線帶動轉換。</li>
+          </ul>
+          <div class="spot-ind">📱 3C 周邊</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「從天亮排到開唱，滿電滿容量才能捕捉每一秒 K-SPARK」</div></div>
+          <ul class="tips">
+            <li>戶外大型拼盤場觀眾等待時間長，適合推廣大容量行動電源、散熱手機殼、手機掛繩、望遠鏡與輕量腳架。</li>
+            <li>多組卡司吸引不同粉圈，可用「拍 GD、聽泰妍、追 KiiiKiii」等分眾文案，讓 3C 配件連結拍攝、錄影與應援剛需。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-head" style="background:linear-gradient(135deg,#FFF3E8,#FDF8E8)">
+          <div class="spot-typebar"><span class="spot-pill c">🎤 Cpop 華語</span><span class="spot-mtag">7月 🔥 大巨蛋</span></div>
+          <div class="spot-artist">五月天《5525+2 回到那一天》台北大巨蛋</div>
+          <div class="spot-sub">7/3–7/12・台北大巨蛋 7連場・25週年巡迴重回大巨蛋版</div>
+          <div class="spot-aud"><span class="aud-tag">25–45 核心樂迷</span><span class="aud-tag">跨世代情懷</span><span class="aud-tag">多人同行</span><span class="aud-tag">高復購周邊需求</span></div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-ind">👗 服飾鞋包</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「回到那一天，也要穿成最青春的自己：五月天大巨蛋 7 連場應援穿搭」</div></div>
+          <ul class="tips">
+            <li>五月天受眾跨年齡層，內容應避免過度偶像化，可主打「青春回憶」、「朋友同行」、「情侶約會」三種情境穿搭，搭配舒適鞋款、牛仔單品、輕量外套與小包。</li>
+            <li>7 連場帶來多波入場需求，適合做「第幾場要穿什麼」系列輪播，結合大巨蛋座位、排隊動線與拍照情境，強化實用導購。</li>
+          </ul>
+          <div class="spot-ind">📱 3C 周邊</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「滿格電量，記錄每一首合唱：大巨蛋 7 連場必備輕巧行動電源」</div></div>
+          <ul class="tips">
+            <li>以大巨蛋多日連唱與全場大合唱的錄影剛需切入，推廣自帶線大容量行動電源、快充線、手機掛繩與輕巧收納包。</li>
+            <li>可搭配「開唱前歌單複習」切角推廣耳機與藍牙喇叭，讓五月天經典歌曲帶動演唱會前一到兩週的預熱購買。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-head" style="background:linear-gradient(135deg,#E8F4FD,#F5F7FB)">
+          <div class="spot-typebar"><span class="spot-pill w">🌍 西洋/其他</span><span class="spot-mtag">9月 🔥 Stadium</span></div>
+          <div class="spot-artist">Post Malone《The BIG ASS Stadium World Tour》高雄</div>
+          <div class="spot-sub">9/19・高雄國家體育場・Post Malone、Don Toliver・大型戶外西洋場</div>
+          <div class="spot-aud"><span class="aud-tag">20–35 西洋樂迷</span><span class="aud-tag">潮流街頭穿搭</span><span class="aud-tag">戶外場剛需</span></div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-ind">👗 服飾鞋包</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「用一身街頭鬆弛感進場：Post Malone 高雄站的美式戶外音樂節穿搭」</div></div>
+          <ul class="tips">
+            <li>Post Malone 受眾偏好街頭、搖滾與美式休閒風格，適合推廣寬版 T-shirt、工裝褲、丹寧、球帽、墨鏡與厚底鞋，強調舒適與辨識度。</li>
+            <li>高雄國家體育場戶外場可加入防曬、透氣、耐走等實用訴求，將服飾導購從「好看」延伸到「能站、能跳、能拍」。</li>
+          </ul>
+          <div class="spot-ind">💄 美妝香氛</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「把美式夜色穿在身上：煙燻木質、皮革調與乾淨持妝的戶外場準備」</div></div>
+          <ul class="tips">
+            <li>香氛可走木質、皮革、菸草與微甜調性，對應 Post Malone 的美式粗獷與浪漫感，適合製作「歌單對應香水」內容。</li>
+            <li>戶外場美妝可主打控油防曬、定妝噴霧與清爽補妝包，將音樂節情境轉為高實用性的消費理由。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-head" style="background:linear-gradient(135deg,#F5F0FF,#FFF3E8)">
+          <div class="spot-typebar"><span class="spot-pill k">🇰🇷 Kpop 韓流</span><span class="spot-mtag">12月 頒獎</span></div>
+          <div class="spot-artist">Asia Artist Awards 2026 in Kaohsiung</div>
+          <div class="spot-sub">12/5–12/6・高雄國家體育場・年度 K-pop 頒獎盛事</div>
+          <div class="spot-aud"><span class="aud-tag">多粉圈集結</span><span class="aud-tag">高話題紅毯</span><span class="aud-tag">跨品牌導購</span></div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-ind">👗 服飾鞋包</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「從紅毯看到觀眾席：AAA 高雄站多粉圈應援穿搭總整理」</div></div>
+          <ul class="tips">
+            <li>頒獎典禮具備多組藝人與紅毯話題，可將穿搭內容分成「紅毯同款靈感」、「觀眾席應援色」、「高雄戶外場保暖與收納」三條線。</li>
+            <li>多粉圈同時集結，適合推廣可客製化的痛包、小卡收納、應援吊飾與配色穿搭，降低單一藝人不確定性。</li>
+          </ul>
+          <div class="spot-ind">📱 3C 周邊</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「紅毯、入場、壓軸都不能漏拍：AAA 高雄站影像裝備清單」</div></div>
+          <ul class="tips">
+            <li>頒獎典禮適合主打高倍望遠鏡、手機長焦配件、行動電源與大容量儲存，滿足粉絲從紅毯到頒獎全程紀錄需求。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spot-card bts-card">
+        <div class="spot-head" style="background:linear-gradient(135deg,#160830,#2B1060,#1B3F7B)">
+          <div class="spot-typebar">
+            <span class="spot-pill k-inv">🇰🇷 Kpop 韓流</span>
+            <span class="spot-mtag-fire">11月 🔥 全年最高</span>
+          </div>
+          <div class="spot-artist" style="color:white">BTS 世界巡迴・高雄 3連場</div>
+          <div class="spot-sub" style="color:rgba(255,255,255,.65)">11/19・11/21・11/22・全員回歸・高雄・史上最大規模</div>
+          <div class="spot-aud">
+            <span class="aud-tag-inv">全年齡層 ARMY</span>
+            <span class="aud-tag-inv">全台跨城市動員</span>
+            <span class="aud-tag-inv">含大量未持票粉絲</span>
+          </div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-ind">👗 服飾鞋包</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「7色 ARMY 應援穿搭全指南！對應每位成員的專屬配色，最有心意的出征 OOTD」</div></div>
+          <ul class="tips">
+            <li>BTS 的應援色是紫色，從服裝到包包、飾品、配件都可能成為當季熱銷。</li>
+            <li>推廣演唱會周邊以及必須攜帶品配件品項，如痛包、手機掛繩、頸掛配件，作為隨場次熱度自然走高的常備選品組合。</li>
+          </ul>
+          <div class="spot-ind">💄 美妝保養、3C、美食</div>
+          <div class="slogan-box"><div class="slogan-label">行銷標語舉例</div><div class="slogan-text">「睽違 8 年！迎接天團重返的一夜」</div></div>
+          <ul class="tips">
+            <li>主推持妝神器，演唱會跟著唱跳流汗，甚至感動落淚的同時，必備的超強定妝噴霧、防水眼線與不掉色唇釉，也在文案帶入經典歌曲《血、汗、淚》（Blood Sweat & Tears）的諧音梗或幽默概念。</li>
+            <li>BTS 超強的帶貨力不容小覷，成員過去在吃播時展示的美食或直播中無意間使用的產品，如忙內柾國喝過的康普茶、隊長 RM 吃過的拉麵、V 的同款包包、香水，都曾被賣到缺貨。</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <div class="footer-lm"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zM9 16H5v-2h4v2zm10-4H5v-2h14v2zm0-4H5V6h14v2z"/></svg></div>
+    <span class="footer-btext">SHOPLINE 電商行銷</span>
+  </div>
+  <div class="footer-note">2026 演唱會行銷行事曆・僅供電商品牌行銷參考使用</div>
+</footer>
+
+<script>
+const EVENTS=[
+  // 5月（已移除 5/13 前場次）
+  {month:'5月',name:'孫燕姿《就在日落以後》台北大巨蛋',sub:'5/15 & 5/17・台北大巨蛋・神級回歸・本月焦點',cat:'c',hot:true,rank:'(1)'},
+  {month:'5月',name:'Laufey: A Matter of Time Tour 台北',sub:'5/15・林口體育館・冰島爵士女聲',cat:'w',hot:true,rank:'(2)'},
+  {month:'5月',name:'ZUTOMAYO《INTENSE II》台北 2連場',sub:'5/16–17・新北工商展覽中心・次文化話題',cat:'j',rank:'(3)'},
+  {month:'5月',name:'中島美嘉 MIKA NAKASHIMA 2026台北演唱會',sub:'5/16–17・台北流行音樂中心・雪の華・NANA主題曲',cat:'j',hot:true,rank:'(4)'},
+  {month:'5月',name:'金鍾炫《COMING HOME》台北粉絲見面會',sub:'5/17(日) 13:00 & 18:00・WESTAR・雙場次',cat:'k',rank:'(5)'},
+  {month:'5月',name:'HYOLYN 孝琳 CONCERT《KEY》台北',sub:'5/23(六)18:00・Legacy TERA・舞台實力派女歌手',cat:'k',rank:'(6)'},
+  {month:'5月',name:'中信棒球音樂季 開幕暨系列演出',sub:'5/22–24・台北大巨蛋・PSY、RIIZE、Ailee、KiiiKiii 等卡司',cat:'f',hot:true,rank:'(7)'},
+  {month:'5月',name:'Rokudenashi「Rokka」3rd Oneman Live 台北',sub:'5/23(六)18:00・TICC台北國際會議中心大會堂',cat:'j',rank:'(8)'},
+  {month:'5月',name:'Dragon Pony《RUN RUN RUN》台北演唱會',sub:'5/23(六)18:00・台大體育館',cat:'k',rank:'(9)'},
+  {month:'5月',name:'WOODZ《Archive. 1》台北巡迴演唱會',sub:'5/23(六)19:30 & 5/24(日)18:00・Zepp New Taipei',cat:'k',rank:'(10)'},
+  {month:'5月',name:'EXID《EXtra ID》台北演唱會',sub:'5/24(日)18:30・TICC台北國際會議中心・Up&Down 逆行奇蹟女團',cat:'k',hot:true,rank:'(11)'},
+  {month:'5月',name:'2AM《오늘, 2am》台北演唱會',sub:'5/24(日)・台大體育館',cat:'k',rank:'(12)'},
+  {month:'5月',name:'QWER 4th Mini Album《CEREMONY》臺北簽售會',sub:'5/29(五)18:00・臺北簽售會・以現場公告為準',cat:'k',rank:'(13)'},
+  {month:'5月',name:'K-SPARK in KAOHSIUNG 2026',sub:'5/30(六)19:00・高雄世運主場館・G-DRAGON、TAEYEON、FTISLAND、DPR IAN、KiiiKiii',cat:'k',hot:true,rank:'(14)'},
+  {month:'5月',name:'李玟雨 2026 M\'s New Chapter Fanmeeting 台北',sub:'5/30(六)17:00・CLAPPER STUDIO',cat:'k',rank:'(15)'},
+  {month:'5月',name:'東海 1ST SOLO CONCERT TOUR 台北',sub:'5/30(六) & 5/31(日)・新北工商展覽中心',cat:'k',rank:'(16)'},
+  {month:'5月',name:'Yuika《2nd Asia Tour》台北 2連場',sub:'5/30(六)18:00 & 5/31(日)15:00・Zepp New Taipei',cat:'j',rank:'(17)'},
+  {month:'5月',name:'G!POP 流行音樂節 2026',sub:'5/30 QWER+孝琳 / 5/31 CNBLUE壓軸・臺北大巨蛋・富邦悍將主辦',cat:'f',hot:true,rank:'(18)'},
+  {month:'5月',name:'ZELO FAN CONCERT《COMIGO:NEXT CHAPTER》台北',sub:'5/31(日)13:00 & 18:30・NUZONE',cat:'k',rank:'(19)'},
+  // 6月
+  {month:'6月',name:'Daniel Caesar《Son of Spergy Tour》桃園',sub:'6/6・桃園會展中心・R&B 創作歌手',cat:'w',hot:true,rank:'(1)'},
+  {month:'6月',name:'King Gnu《CEN+RAL Tour 2026》台北小巨蛋 2連場',sub:'6/6(六) & 6/7(日)・台北小巨蛋・日本頂流樂團',cat:'j',hot:true,rank:'(2)'},
+  {month:'6月',name:'IRENE《I-WILL》ASIA TOUR 台北',sub:'6/6(六) & 6/7(日)・台大體育館・SHOW OFFICE主辦',cat:'k',hot:true,rank:'(3)'},
+  {month:'6月',name:'金宣虎《Love Factory》ASIA TOUR 台北',sub:'6/6(六)18:00・新北市工商展覽中心・韓星粉絲見面會',cat:'k',rank:'(4)'},
+  {month:'6月',name:'李成種《CHAMBER：WINGS》台北粉絲見面會',sub:'6/7(日)17:00・Clapper Studio',cat:'k',rank:'(5)'},
+  {month:'6月',name:'CNBLUE《3LOGY》高雄 2連場',sub:'6/13(六) & 6/14(日)・高雄流行音樂中心海音館',cat:'k',hot:true,rank:'(6)'},
+  {month:'6月',name:'KISS OF LIFE《DEJA VU》Fanmeeting 台北',sub:'6/13(六)18:00・台北國際會議中心 TICC',cat:'k',rank:'(7)'},
+  {month:'6月',name:'LiSA《LiVE is Smile Always ～15～》台北小巨蛋 2連場',sub:'6/19–20・台北小巨蛋・日本搖滾歌姬出道15周年巡演',cat:'j',hot:true,rank:'(8)'},
+  {month:'6月',name:'MIXPOP 2026拼盤演唱會',sub:'6/20(六)・高雄流行音樂中心 海音館・ONEUS & &TEAM',cat:'f',rank:'(9)'},
+  {month:'6月',name:'FTISLAND TOUR 0 — XIX — III《FaTe》台北',sub:'6/20(六)18:00 & 6/21(日)17:00・Legacy TERA',cat:'k',rank:'(10)'},
+  {month:'6月',name:'&TEAM《BLAZE THE WAY》台北巡迴演唱會',sub:'6/21(日)・國立體育大學綜合體育場（林口體育館）',cat:'k',rank:'(11)'},
+  {month:'6月',name:'圭賢 KyuHyun《Hotel 203》20週年粉絲見面會',sub:'6/27(六)18:00・天母體育館・全場實名制座位席',cat:'k',rank:'(12)'},
+  {month:'6月',name:'ITZY《TUNNEL VISION》高雄巨蛋 2連場',sub:'6/27(六)18:00 & 6/28(日)17:00・高雄巨蛋・加場確認',cat:'k',hot:true,rank:'(13)'},
+  // 7月
+  {month:'7月',name:'The Kid LAROI《A Perfect World Tour》台北',sub:'7/3・Zepp New Taipei・澳洲新生代歌手',cat:'w',rank:'(1)'},
+  {month:'7月',name:'五月天《5525+2 回到那一天》台北大巨蛋 7連場',sub:'7/3、7/4、7/5、7/8、7/10、7/11、7/12・25週年巡迴重回大巨蛋',cat:'c',hot:true,rank:'(2)'},
+  {month:'7月',name:'高雄啤酒音樂節',sub:'7/3–7/5・高雄夢時代前廣場・Rain、RIIZE、BTOB、YESUNG、周子瑜等',cat:'f',hot:true,rank:'(3)'},
+  {month:'7月',name:'JAEHYUN 在玹 FAN-CON TOUR《Mono》台北',sub:'7/4(六)18:00 & 7/5(日)18:00・臺北流行音樂中心',cat:'k',hot:true,rank:'(4)'},
+  {month:'7月',name:'李主儐《JOOTOPIA》亞洲巡迴台北粉絲見面會',sub:'7/4(六)13:00 / 18:00・NUZONE',cat:'k',rank:'(5)'},
+  {month:'7月',name:'NMIXX《EPISODE 1: ZERO FRONTIER》高雄巨蛋 2連場',sub:'7/11(六)18:00 & 7/12(日)18:00・高雄巨蛋・加場確認',cat:'k',hot:true,rank:'(6)'},
+  {month:'7月',name:'EXO《PLANET #6 - EXhOrizon》高雄巨蛋 2連場',sub:'7/18(六)18:00 & 7/19(日)18:00・高雄巨蛋・加場確認',cat:'k',hot:true,rank:'(7)'},
+  {month:'7月',name:'NCT JNJM FANMEETING TOUR《DUALITY》高雄',sub:'7/18(六)17:00・高雄流行音樂中心海音館',cat:'k',rank:'(8)'},
+  {month:'7月',name:'MISIA 星空現場 XIII 台北',sub:'7/25・台北流行音樂中心・日本傳奇天后',cat:'j',rank:'(9)'},
+  {month:'7月',name:'DxS《소야곡 ON STAGE》高雄巨蛋',sub:'7/25・高雄巨蛋・SEVENTEEN DK & 勝寛雙主唱巡演',cat:'k',rank:'(10)'},
+  {month:'7月',name:'東海 1ST SOLO CONCERT TOUR 高雄',sub:'7/25(六)・高雄流行音樂中心',cat:'k',rank:'(11)'},
+  {month:'7月',name:'HONNE 10周年 台北',sub:'7/28・Zepp New Taipei・英國 chill 電音',cat:'w',rank:'(12)'},
+  // 8月
+  {month:'8月',name:'aespa LIVE TOUR《SYNK : COMPLæXITY》台北',sub:'8/11(二)・臺北大巨蛋・高話題女團大巨蛋場',cat:'k',hot:true,rank:'(1)'},
+  {month:'8月',name:'T CONCERT《IDOL MEET FEST 偶像相遇祭》',sub:'8/1–8/2・臺北流行音樂中心 表演廳&戶外廣場・多組台灣偶像團體',cat:'f',rank:'(2)'},
+  {month:'8月',name:'王心凌 台北小巨蛋',sub:'暑假檔・甜心天后・跨世代懷舊',cat:'c',rank:'(3)'},
+  // 9月
+  {month:'9月',name:'IVE《SHOW WHAT I AM》台北小巨蛋 3連場',sub:'9/11(五)19:00、9/12(六)18:00、9/13(日)加場・第二次世界巡演',cat:'k',hot:true,rank:'(1)'},
+  {month:'9月',name:'Post Malone《The BIG ASS Stadium World Tour》高雄',sub:'9/19(六)・高雄國家體育場・Post Malone、Don Toliver',cat:'w',hot:true,rank:'(2)'},
+  {month:'9月',name:'Lee YoungJi《2.0》世界巡迴台北 2連場',sub:'9/19(六) & 9/20(日)・臺北流行音樂中心',cat:'k',rank:'(3)'},
+  {month:'9月',name:'LANY《soft world tour》台北',sub:'9/26(六)・台北小巨蛋・美式流行樂團',cat:'w',rank:'(4)'},
+  {month:'9月',name:'惠利《HYERIDE》台北粉絲見面會',sub:'9/5(六)・台北國際會議中心 TICC',cat:'k',rank:'(5)'},
+  // 10月
+  {month:'10月',name:'Charlie Puth《Whatever\'s Clever!》世界巡迴 桃園',sub:'10/18(日)20:00・桃園陽光劇場・西洋流行強檔',cat:'w',hot:true,rank:'(1)'},
+  {month:'10月',name:'Novelbright ASIA TOUR 2026《PYRAMID》台北',sub:'10/24(六)18:00・新北市工商展覽中心',cat:'j',rank:'(2)'},
+  {month:'10月',name:'TWS TOUR《24/7:FOR:YOU》高雄',sub:'10/24(六)・高雄巨蛋',cat:'k',rank:'(3)'},
+  {month:'10月',name:'Fujii Kaze 藤井風 Prema World Tour 高雄',sub:'10/31(六)・高雄國家體育場',cat:'j',hot:true,rank:'(4)'},
+  {month:'10月',name:'Vaundy 台北 2連場',sub:'10/31–11/1・台北（場地待定）・日本高人氣創作才子',cat:'j',rank:'(5)'},
+  // 11月
+  {month:'11月',name:'LE SSERAFIM TOUR《PUREFLOW》台北',sub:'11/14(六)–11/15(日)・台北・高話題女團巡演',cat:'k',hot:true,rank:'(1)'},
+  {month:'11月',name:'BABYMONSTER WORLD TOUR《춤 (CHOOM)》台北',sub:'11/21(六)–11/22(日)・台北小巨蛋',cat:'k',hot:true,rank:'(2)'},
+  {month:'11月',name:'BTS 世界巡迴 高雄 3連場',sub:'11/19・11/21・11/22・全員回歸・史上最大規模',cat:'k',hot:true,rank:'全年最高',yearly:true},
+  // 12月
+  {month:'12月',name:'Asia Artist Awards 2026 in Kaohsiung',sub:'12/5(六) & 12/6(日)・高雄國家體育場・年度 K-pop 頒獎盛事',cat:'k',hot:true,rank:'(1)'},
+];
+const CN={k:'🇰🇷 韓流',j:'🇯🇵 日系',c:'🎤 華語',w:'🌍 西洋',f:'🎪 音樂祭'};
+function renderCal(f){
+  const months=[...new Set(EVENTS.map(e=>e.month))];
+  const g=document.getElementById('cal-grid');
+  g.innerHTML='';
+  months.forEach(m=>{
+    const evs=EVENTS.filter(e=>e.month===m&&(f==='all'||e.cat===f));
+    if(!evs.length)return;
+    const c=document.createElement('div');
+    c.className='month-card';
+    c.innerHTML=`<div class="month-head"><span>${m}</span><span>${evs.length} 場次</span></div>`+
+      evs.map(e=>{
+        const rowClass=`ev-row ${e.cat}${e.yearly?' yearly-highlight':''}`;
+        const yearlyBadge=e.yearly?'<span class="yearly-badge">🔥 全年話題</span>':'';
+        const hotBadge=(!e.yearly&&e.hot&&e.rank!=='全年最高')?'<span class="etag hot-etag">🔥 話題</span>':'';
+        const tbdBadge=e.tbd?'<span class="tbd-ev-badge">⏳ 日期待定</span>':'';
+        return `<div class="${rowClass}"><div class="ev-dot"></div><div>
+        <div class="ev-name">${e.name}</div>
+        <div class="ev-sub">${e.sub}</div>
+        <div class="ev-tags">
+          <span class="cat-tag tag-${e.cat}">${CN[e.cat]}</span>
+          <span class="etag rank-etag">${e.rank}</span>
+          ${tbdBadge}${yearlyBadge}${hotBadge}
+        </div></div></div>`;
+      }).join('');
+    g.appendChild(c);
+  });
+}
+function filterCal(f,btn){
+  document.querySelectorAll('.fil-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');renderCal(f);
+}
+renderCal('all');
+function navTo(id,btn){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+}
+const sids=['calendar','timing','strategy','spotlight'];
+const nbs=document.querySelectorAll('.nav-btn');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){const i=sids.indexOf(e.target.id);if(i>=0){nbs.forEach(b=>b.classList.remove('on'));nbs[i].classList.add('on');}}});
+},{threshold:0.25});
+sids.forEach(id=>{const el=document.getElementById(id);if(el)obs.observe(el);});
+</script>
+</body>
+</html>
